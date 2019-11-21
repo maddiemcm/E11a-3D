@@ -32,5 +32,5 @@ mesh = SubResource( 4 )
 material/0 = null
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.930464, 0.366384, 0, -0.366384, 0.930464, 0, 4.11371, 4.80896 )
+transform = Transform( 1, 0, 0, 0, 0.901758, 0.432241, 0, -0.432241, 0.901758, 0, 4.11371, 4.80896 )
 current = true
