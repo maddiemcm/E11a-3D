@@ -15,13 +15,13 @@ func _physics_process(delta):
 func get_input():
 	var vy = velocity.y
 	velocity = Vector3()
-	if Input.is_action_just_pressed("move_forward"):
+	if Input.is_action_pressed("move_forward"):
 		velocity += -transform.basis.z * speed
-	if Input.is_action_just_pressed("move_back"):
+	if Input.is_action_pressed("move_back"):
 		velocity += transform.basis.z * speed
-	if Input.is_action_just_pressed("strafe_right"):
+	if Input.is_action_pressed("strafe_right"):
 		velocity += transform.basis.x * speed
-	if Input.is_action_just_pressed("strafe_left"):
+	if Input.is_action_pressed("strafe_left"):
 		velocity += -transform.basis.x * speed
 	velocity.y = vy
 	
