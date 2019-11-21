@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Spatial.gd" type="Script" id=1]
 [ext_resource path="res://platform_objects/BlockLarge.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=3]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.113725, 0.333333, 0.211765, 1 )
@@ -28,10 +29,13 @@ shape = SubResource( 3 )
 [node name="CameraHub" type="Spatial" parent="."]
 
 [node name="Camera" type="Camera" parent="CameraHub"]
-transform = Transform( 1, 0, 0, 0, 0.810941, 0.585127, 0, -0.585127, 0.810941, 0, 3.19207, 4.77065 )
+transform = Transform( 1, -2.80971e-08, -1.02265e-08, 2.80971e-08, 0.766044, 0.642788, -1.02265e-08, -0.642788, 0.766044, 0, 6.692, 10 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.900891, 0.0881434, 0.425001, -0.423877, 0.389363, 0.817756, -0.0933997, -0.916857, 0.388135, 3.38113, 5.19376, 6.09397 )
 shadow_enabled = true
 
 [node name="BlockLarge" parent="." instance=ExtResource( 2 )]
+
+[node name="Character" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 4.5 )
