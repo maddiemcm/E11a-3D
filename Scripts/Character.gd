@@ -13,16 +13,17 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3.UP)
 	
 func get_input():
-	velocity.x = 0
-	velocity.z = 0
+	var vy = velocity.y
+	velocity = Vector3()
 	if Input.is_action_just_pressed("move_forward"):
-		velocity.z -= speed
+		velocity += -transform.basis.z * speed
 	if Input.is_action_just_pressed("move_back"):
-		velocity.z += speed
+		velocity += transform.basis.z * speed
 	if Input.is_action_just_pressed("strafe_right"):
-		velocity.x += speed
+		velocity += transform.basis.x * speed
 	if Input.is_action_just_pressed("strafe_left"):
-		velocity.x -= speed
+		velocity += -transform.basis.x * speed
+	velocity.y = vy
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
