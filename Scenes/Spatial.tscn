@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Spatial.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Crate.tscn" type="PackedScene" id=2]
 
 [sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( 5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, -5 )
@@ -24,27 +23,6 @@ shape = SubResource( 3 )
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
 mesh = SubResource( 2 )
 material/0 = null
-
-[node name="Crate" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.264304, 0 )
-
-[node name="Crate2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.503071, 0.765483, 0 )
-
-[node name="Crate3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50459, 0.263528, 0 )
-
-[node name="Crate4" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0027, 0.764625, 0 )
-
-[node name="Crate5" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0027, 0.263913, 0 )
-
-[node name="Crate6" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0027, 1.26394, 0 )
-
-[node name="Crate7" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.889756, -0.456437, 0, 0.456437, 0.889756, 0, 0, 0, 1, 0.591941, 2.13299, 0 )
 
 [node name="CameraHub" type="Spatial" parent="."]
 
